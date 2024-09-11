@@ -1,0 +1,88 @@
+{
+  "name": "joke",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "iJqzM",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avat",
+      "name": "Store Member Info"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.wiedzminpolska.xyz/zart",
+      "path": "zart",
+      "storage": "1",
+      "varName": "api",
+      "debugMode": "0",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.wiedzminpolska.xyz/zart",
+      "path": "numer",
+      "storage": "1",
+      "varName": "nr",
+      "debugMode": "0",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Losowy żary",
+          "url": "",
+          "color": "#2f3136",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "**${tempVars(\"api\")}**",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "Losowy żart: ${tempVars(\"nr\")}",
+          "footerIconUrl": "${tempVars(\"avat\")}"
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "_timeRestriction": 30,
+  "comType": "4",
+  "description": "Losowy żart"
+}

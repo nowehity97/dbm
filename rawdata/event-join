@@ -1,0 +1,81 @@
+{
+  "name": "sys",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "gZzam",
+  "actions": [
+    {
+      "comment": "zainstaluj moduł > npm i discord-systems",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "comment": "zmień id kanału > join >options >Channel (ID)",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "comment": "zmień id serwera > settins > Guild (ID)",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "member": "2",
+      "varName": "join",
+      "info": "2",
+      "storage": "1",
+      "varName2": "memame",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "join",
+      "info": "1",
+      "storage": "1",
+      "varName2": "memid",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "35",
+      "storage": "1",
+      "varName2": "count",
+      "name": "Store Server Info"
+    },
+    {
+      "levelcard": [],
+      "text": "",
+      "style": "0",
+      "joincard": [
+        {
+          "text1": "Witamy ${tempVars(\"memame\")} :)",
+          "text2": "Na serwerze Wiedźmin Polska",
+          "text3": "Jesteś  ${tempVars(\"count\")} użytkownikiem",
+          "texth": "#ffffff",
+          "background": "https://i.ibb.co/5sLF1dz/item17.png",
+          "channelid": "1224088754931630120",
+          "captcha": "0",
+          "name": "${tempVars(\"memame\")}",
+          "memberid": "${tempVars(\"memid\")}",
+          "role": ""
+        }
+      ],
+      "leavecard": [],
+      "embeds": [],
+      "slevel": false,
+      "sjoin": true,
+      "stvpis": false,
+      "sleave": false,
+      "scalculator": false,
+      "language": "0",
+      "msgsend": "0",
+      "guild": "888827274005184572",
+      "name": "Systems"
+    }
+  ],
+  "comType": "0",
+  "event-type": "6",
+  "temp": "join"
+}

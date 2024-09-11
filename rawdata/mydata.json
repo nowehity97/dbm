@@ -1,0 +1,277 @@
+{
+  "name": "mydata",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "tUyxR",
+  "actions": [
+    {
+      "comment": "zainstaluj moduł >  npm i quick.db@7.1.3",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "comment": "zainstaluj moduł >  npm i sqlite3",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "storage": "4",
+      "varName": "osoba",
+      "comparison": "3",
+      "branch": {
+        "iftrue": "2",
+        "iffalse": "0",
+        "iftrueVal": "14"
+      },
+      "name": "Check Variable Type"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "1",
+      "varName": "meavatar",
+      "info": "1",
+      "storage": "1",
+      "varName2": "auid",
+      "name": "Store Member Info"
+    },
+    {
+      "dbformat": "quick.db",
+      "dboperation": "get",
+      "dbpath": "client.${tempVars(\"auid\")}.kasa",
+      "dbvalue": "",
+      "storage": "1",
+      "varName": "aukasa",
+      "name": "Local Database"
+    },
+    {
+      "dbformat": "quick.db",
+      "dboperation": "get",
+      "dbpath": "client.${tempVars(\"auid\")}.wia",
+      "dbvalue": "",
+      "storage": "1",
+      "varName": "auwia",
+      "name": "Local Database"
+    },
+    {
+      "text": "${tempVars(\"aukasa\")}",
+      "text2": "undefined",
+      "text3": "0",
+      "info": "0",
+      "storage": "1",
+      "varName": "repaukasa",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"auwia\")}",
+      "text2": "undefined",
+      "text3": "0",
+      "info": "0",
+      "storage": "1",
+      "varName": "repauwia",
+      "name": "Replace Text"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "memname",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "namekom",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatorav",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "#2f3136",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "",
+          "fields": [
+            {
+              "name": "Kasa:",
+              "value": "${tempVars(\"aukasa\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Wiadmości:",
+              "value": "${tempVars(\"repauwia\")}",
+              "inline": "false"
+            }
+          ],
+          "author": "${tempVars(\"memname\")}",
+          "authorUrl": "${tempVars(\"avatorav\")}",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "ozid",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "5",
+      "varName": "osoba",
+      "info": "1",
+      "storage": "1",
+      "varName2": "auid",
+      "name": "Store Member Info"
+    },
+    {
+      "dbformat": "quick.db",
+      "dboperation": "get",
+      "dbpath": "client.${tempVars(\"auid\")}.kasa",
+      "dbvalue": "",
+      "storage": "1",
+      "varName": "ozkasa",
+      "name": "Local Database"
+    },
+    {
+      "dbformat": "quick.db",
+      "dboperation": "get",
+      "dbpath": "client.${tempVars(\"auid\")}.wia",
+      "dbvalue": "",
+      "storage": "1",
+      "varName": "ozwia",
+      "name": "Local Database"
+    },
+    {
+      "member": "5",
+      "varName": "osoba",
+      "info": "2",
+      "storage": "1",
+      "varName2": "ozname",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "osoba",
+      "info": "16",
+      "storage": "1",
+      "varName2": "ozava",
+      "name": "Store Member Info"
+    },
+    {
+      "text": "${tempVars(\"ozkasa\")}",
+      "text2": "undefined",
+      "text3": "0",
+      "info": "0",
+      "storage": "1",
+      "varName": "ozrepkasa",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"ozwia\")}",
+      "text2": "undefined",
+      "text3": "0",
+      "info": "0",
+      "storage": "1",
+      "varName": "ozrepwia",
+      "name": "Replace Text"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "#2f3136",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "",
+          "fields": [
+            {
+              "name": "Kasa:",
+              "value": "${tempVars(\"ozrepkasa\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Wiadomosci:",
+              "value": "${tempVars(\"ozrepwia\")}",
+              "inline": "false"
+            }
+          ],
+          "author": "${tempVars(\"ozname\")}",
+          "authorUrl": "${tempVars(\"ozava\")}",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "_aliases": [
+    "data",
+    "mydate",
+    "date"
+  ],
+  "_timeRestriction": 15,
+  "parameters": [
+    {
+      "name": "osoba",
+      "description": "",
+      "type": "USER",
+      "required": false,
+      "choices": null
+    }
+  ],
+  "description": "Zobacz swoją datę lub kogoś innego"
+}

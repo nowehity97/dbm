@@ -1,0 +1,36 @@
+{
+  "name": "wia-licz",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "HAZxY",
+  "actions": [
+    {
+      "comment": "zainstaluj moduł >  npm i quick.db@7.1.3",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "comment": "zainstaluj moduł >  npm i sqlite3",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "dbformat": "quick.db",
+      "dboperation": "add",
+      "dbpath": "client.${tempVars(\"id\")}.wia",
+      "dbvalue": "1",
+      "storage": "1",
+      "varName": "baza",
+      "name": "Local Database"
+    }
+  ],
+  "comType": "3"
+}

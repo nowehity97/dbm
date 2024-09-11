@@ -1,0 +1,275 @@
+{
+  "name": "rso",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "JaWvp",
+  "actions": [
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://komunikaty.tvp.pl/komunikatyxml/${slashParams(\"woj\")}/${slashParams(\"typ\")}/0?_format=json",
+      "path": "$.newses[0].content",
+      "storage": "1",
+      "varName": "penopis",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "text": "${tempVars(\"penopis\")}",
+      "text2": "{\"error\":\"No JSON Data Returned\",\"statusCode\":0}",
+      "text3": "Brak danych",
+      "info": "0",
+      "storage": "1",
+      "varName": "reppenopis",
+      "name": "Replace Text"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://komunikaty.tvp.pl/komunikatyxml/${slashParams(\"woj\")}/${slashParams(\"typ\")}/0?_format=json",
+      "path": "$.newses[0].shortcut",
+      "storage": "1",
+      "varName": "skopis",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "text": "${tempVars(\"skopis\")}",
+      "text2": "{\"error\":\"No JSON Data Returned\",\"statusCode\":0}",
+      "text3": "Brak danych",
+      "info": "0",
+      "storage": "1",
+      "varName": "repskopis",
+      "name": "Replace Text"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://komunikaty.tvp.pl/komunikatyxml/${slashParams(\"woj\")}/${slashParams(\"typ\")}/0?_format=json",
+      "path": "$.newses[0].valid_from",
+      "storage": "1",
+      "varName": "odgodz",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "text": "${tempVars(\"odgodz\")}",
+      "text2": "{\"error\":\"No JSON Data Returned\",\"statusCode\":0}",
+      "text3": "Brak danych",
+      "info": "0",
+      "storage": "1",
+      "varName": "repodgodz",
+      "name": "Replace Text"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://komunikaty.tvp.pl/komunikatyxml/${slashParams(\"woj\")}/${slashParams(\"typ\")}/0?_format=json",
+      "path": "$.newses[0].valid_to",
+      "storage": "1",
+      "varName": "dogodz",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "text": "${tempVars(\"dogodz\")}",
+      "text2": "{\"error\":\"No JSON Data Returned\",\"statusCode\":0}",
+      "text3": "Brak danych",
+      "info": "0",
+      "storage": "1",
+      "varName": "repdogodz",
+      "name": "Replace Text"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://komunikaty.tvp.pl/komunikatyxml/${slashParams(\"woj\")}/${slashParams(\"typ\")}/0?_format=json",
+      "path": "$.newses[0].title",
+      "storage": "1",
+      "varName": "tutul",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "text": "${tempVars(\"tutul\")}",
+      "text2": "{\"error\":\"No JSON Data Returned\",\"statusCode\":0}",
+      "text3": "Brak danych",
+      "info": "0",
+      "storage": "1",
+      "varName": "reptutul",
+      "name": "Replace Text"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Informacje dla woj: ${slashParams(\"woj\")}  typ informacji: ${slashParams(\"typ\")}",
+          "url": "",
+          "color": "#2f3136",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "",
+          "fields": [
+            {
+              "name": "Tytuł:",
+              "value": "> ${tempVars(\"reptutul\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Skrócony opis:",
+              "value": "> ${tempVars(\"repskopis\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Pełny opis:",
+              "value": "> ${tempVars(\"reppenopis\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Ważny od godziny:",
+              "value": "> ${tempVars(\"repodgodz\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Ważny do godziny:",
+              "value": "> ${tempVars(\"repdogodz\")}",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "woj",
+      "description": "wybierz swoje wojewodztwo",
+      "type": "STRING",
+      "required": true,
+      "choices": [
+        {
+          "name": "dolnoslaskie",
+          "value": "dolnoslaskie"
+        },
+        {
+          "name": "kujawsko-pomorskie",
+          "value": "kujawsko-pomorskie"
+        },
+        {
+          "name": "lubelskie",
+          "value": "lubelskie"
+        },
+        {
+          "name": "lubuskie",
+          "value": "lubuskie"
+        },
+        {
+          "name": "lodzkie",
+          "value": "lodzkie"
+        },
+        {
+          "name": "malopolskie",
+          "value": "malopolskie"
+        },
+        {
+          "name": "mazowieckie",
+          "value": "mazowieckie"
+        },
+        {
+          "name": "opolskie",
+          "value": "opolskie"
+        },
+        {
+          "name": "podkarpackie",
+          "value": "podkarpackie"
+        },
+        {
+          "name": "podlaskie",
+          "value": "podlaskie"
+        },
+        {
+          "name": "pomorskie",
+          "value": "pomorskie"
+        },
+        {
+          "name": "slaskie",
+          "value": "slaskie"
+        },
+        {
+          "name": "swietokrzyskie",
+          "value": "swietokrzyskie"
+        },
+        {
+          "name": "warminsko-mazurskie",
+          "value": "warminsko-mazurskie"
+        },
+        {
+          "name": "wielkopolskie",
+          "value": "wielkopolskie"
+        },
+        {
+          "name": "zachodniopomorskie",
+          "value": "zachodniopomorskie"
+        }
+      ]
+    },
+    {
+      "name": "typ",
+      "description": "Wybierz typ komunikatu",
+      "type": "STRING",
+      "required": true,
+      "choices": [
+        {
+          "name": "meteorologiczne",
+          "value": "meteorologiczne"
+        },
+        {
+          "name": "hydrologiczne",
+          "value": "hydrologiczne"
+        },
+        {
+          "name": "informacje-drogowe",
+          "value": "informacje-drogowe"
+        }
+      ]
+    }
+  ]
+}

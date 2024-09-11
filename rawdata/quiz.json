@@ -1,0 +1,2463 @@
+{
+  "name": "quiz",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "EBpkl",
+  "actions": [
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.wiedzminpolska.xyz/quiz",
+      "path": "$.Pytanie",
+      "storage": "1",
+      "varName": "question",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.wiedzminpolska.xyz/quiz",
+      "path": "$.poprawna_odpowiedz",
+      "storage": "1",
+      "varName": "correctAnswer",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.wiedzminpolska.xyz/quiz",
+      "path": "$.nieprawidlowe_odpowiedzi[0]",
+      "storage": "1",
+      "varName": "incorrectAnswers.0",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.wiedzminpolska.xyz/quiz",
+      "path": "$.nieprawidlowe_odpowiedzi[1]",
+      "storage": "1",
+      "varName": "incorrectAnswers.1",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.wiedzminpolska.xyz/quiz",
+      "path": "$.nieprawidlowe_odpowiedzi[2]",
+      "storage": "1",
+      "varName": "incorrectAnswers.2",
+      "debugMode": "1",
+      "headers": "",
+      "reUse": "1",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Tworzę quiz...",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": false,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "delete",
+      "name": "Send Message"
+    },
+    {
+      "comment": "Number",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "Random Number",
+      "min": "1",
+      "max": "4",
+      "name": "Generate Random Number"
+    },
+    {
+      "comment": "1",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "delete",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Random Number",
+      "comparison": "1",
+      "value": "1",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "1"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [
+        {
+          "name": "A",
+          "type": "PRIMARY",
+          "id": "msg-button-d19d4e3",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Sprawdzanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "message.to.delete.1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "message.to.delete.1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "GREEN",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"correctAnswer\")}\nB: ${tempVars(\"incorrectAnswers.0\")}\nC: ${tempVars(\"incorrectAnswers.1\")}\nD: ${tempVars(\"incorrectAnswers.2\")}\n\nTwoja opd: A\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        },
+        {
+          "name": "B",
+          "type": "PRIMARY",
+          "id": "msg-button-968b1e0",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Sprawdzanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "message.to.delete.1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "message.to.delete.1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "RED",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"correctAnswer\")}\nB: ${tempVars(\"incorrectAnswers.0\")}\nC: ${tempVars(\"incorrectAnswers.1\")}\nD: ${tempVars(\"incorrectAnswers.2\")}\n\nTwoja opd: B\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        },
+        {
+          "name": "C",
+          "type": "PRIMARY",
+          "id": "msg-button-b6d0eb5",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Sprawdzanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "message.to.delete.1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "message.to.delete.1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "RED",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"correctAnswer\")}\nB: ${tempVars(\"incorrectAnswers.0\")}\nC: ${tempVars(\"incorrectAnswers.1\")}\nD: ${tempVars(\"incorrectAnswers.2\")}\n\nTwoja Opd: C\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        },
+        {
+          "name": "D",
+          "type": "PRIMARY",
+          "id": "msg-button-ef10fb9",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Sprawdzanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "message.to.delete.1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "message.to.delete.1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "RED",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"correctAnswer\")}\nB: ${tempVars(\"incorrectAnswers.0\")}\nC: ${tempVars(\"incorrectAnswers.1\")}\nD: ${tempVars(\"incorrectAnswers.2\")}\n\nTwoja opd: D\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Quiz:",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"correctAnswer\")}\nB: ${tempVars(\"incorrectAnswers.0\")}\nC: ${tempVars(\"incorrectAnswers.1\")}\nD: ${tempVars(\"incorrectAnswers.2\")}",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "message.main",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Random Number",
+      "comparison": "1",
+      "value": "2",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "1"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [
+        {
+          "name": "A",
+          "type": "PRIMARY",
+          "id": "msg-button-2bc2528",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Sprawdzanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "message.to.delete.1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "message.to.delete.1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "RED",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"incorrectAnswers.0\")}\nB: ${tempVars(\"correctAnswer\")}\nC: ${tempVars(\"incorrectAnswers.1\")}\nD: ${tempVars(\"incorrectAnswers.2\")}\n\nTwoja opd: A\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        },
+        {
+          "name": "B",
+          "type": "PRIMARY",
+          "id": "msg-button-d2d2c7c",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Sprawdzanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "message.to.delete.1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "message.to.delete.1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "GREEN",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"incorrectAnswers.0\")}\nB: ${tempVars(\"correctAnswer\")}\nC: ${tempVars(\"incorrectAnswers.1\")}\nD: ${tempVars(\"incorrectAnswers.2\")}\n\nTwoja opd: B\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        },
+        {
+          "name": "C",
+          "type": "PRIMARY",
+          "id": "msg-button-810e699",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Rozwiązanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "message.to.delete.1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "message.to.delete.1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "RED",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"incorrectAnswers.0\")}\nB: ${tempVars(\"correctAnswer\")}\nC: ${tempVars(\"incorrectAnswers.1\")}\nD: ${tempVars(\"incorrectAnswers.2\")}\n\nTwoja opd: C\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        },
+        {
+          "name": "D",
+          "type": "PRIMARY",
+          "id": "msg-button-2335b6d",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Sprawdzanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "message.to.delete.1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "message.to.delete.1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "RED",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"incorrectAnswers.0\")}\nB: ${tempVars(\"correctAnswer\")}\nC: ${tempVars(\"incorrectAnswers.1\")}\nD: ${tempVars(\"incorrectAnswers.2\")}\n\nTwoja opd: D\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Quiz:",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"incorrectAnswers.0\")}\nB: ${tempVars(\"correctAnswer\")}\nC: ${tempVars(\"incorrectAnswers.1\")}\nD: ${tempVars(\"incorrectAnswers.2\")}",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "message.main",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Random Number",
+      "comparison": "1",
+      "value": "3",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "1"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [
+        {
+          "name": "A",
+          "type": "PRIMARY",
+          "id": "msg-button-8d36741",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Sprawdzanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "message.to.delete.1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "message.to.delete.1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "RED",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"incorrectAnswers.0\")}\nB: ${tempVars(\"incorrectAnswers.1\")}\nC: ${tempVars(\"correctAnswer\")}\nD: ${tempVars(\"incorrectAnswers.2\")}\n\nTwoja opd: A\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        },
+        {
+          "name": "B",
+          "type": "PRIMARY",
+          "id": "msg-button-a0277d7",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Sprawdzanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "message.to.delete.1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "message.to.delete.1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "RED",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"incorrectAnswers.0\")}\nB: ${tempVars(\"incorrectAnswers.1\")}\nC: ${tempVars(\"correctAnswer\")}\nD: ${tempVars(\"incorrectAnswers.2\")}\n\nTwoja opd: B\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        },
+        {
+          "name": "C",
+          "type": "PRIMARY",
+          "id": "msg-button-a0a5c53",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Sprawdzanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "message.to.delete.1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "message.to.delete.1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "GREEN",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"incorrectAnswers.0\")}\nB: ${tempVars(\"incorrectAnswers.1\")}\nC: ${tempVars(\"correctAnswer\")}\nD: ${tempVars(\"incorrectAnswers.2\")}\n\nTwoja opd: C\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        },
+        {
+          "name": "D",
+          "type": "PRIMARY",
+          "id": "msg-button-13dc477",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Sprawdzanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "message.to.delete.1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "message.to.delete.1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "RED",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"incorrectAnswers.0\")}\nB: ${tempVars(\"incorrectAnswers.1\")}\nC: ${tempVars(\"correctAnswer\")}\nD: ${tempVars(\"incorrectAnswers.2\")}\n\nTwoja opd: C\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Quiz:",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"incorrectAnswers.0\")}\nB: ${tempVars(\"incorrectAnswers.1\")}\nC: ${tempVars(\"correctAnswer\")}\nD: ${tempVars(\"incorrectAnswers.2\")}",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "message.main",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Random Number",
+      "comparison": "1",
+      "value": "4",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "1"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [
+        {
+          "name": "A",
+          "type": "PRIMARY",
+          "id": "msg-button-0f510e2",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Sprawdzanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "messtodelete1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "messtodelete1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "RED",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"incorrectAnswers.0\")}\nB: ${tempVars(\"incorrectAnswers.1\")}\nC: ${tempVars(\"incorrectAnswers.2\")}\nD: ${tempVars(\"correctAnswer\")}\n\nTwoja opd: A\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        },
+        {
+          "name": "B",
+          "type": "PRIMARY",
+          "id": "msg-button-6e85bf3",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Sprawdzanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "message.to.delete.1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "message.to.delete.1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "RED",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytaie: ${tempVars(\"question\")}\nA: ${tempVars(\"incorrectAnswers.0\")}\nB: ${tempVars(\"incorrectAnswers.1\")}\nC: ${tempVars(\"incorrectAnswers.2\")}\nD: ${tempVars(\"correctAnswer\")}\n\nTwoja opd: B\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        },
+        {
+          "name": "C",
+          "type": "PRIMARY",
+          "id": "msg-button-a29a696",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Sprawdzanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "message.to.delete.1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "message.to.delete.1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "RED",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"incorrectAnswers.0\")}\nB: ${tempVars(\"incorrectAnswers.1\")}\nC: ${tempVars(\"incorrectAnswers.2\")}\nD: ${tempVars(\"correctAnswer\")}\n\nTwoja opd: C\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        },
+        {
+          "name": "D",
+          "type": "PRIMARY",
+          "id": "msg-button-5c99775",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "Sprawdzanie...",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "1",
+              "varName2": "message.to.delete.1",
+              "name": "Send Message"
+            },
+            {
+              "storage": "1",
+              "varName": "message.to.delete.1",
+              "reason": "",
+              "name": "Delete Message"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "question",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "question",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "correctAnswer",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "correctAnswer",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.0",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.0",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.1",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.1",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "dataName": "incorrectAnswers.2",
+              "defaultVal": "0",
+              "storage": "1",
+              "varName2": "incorrectAnswers.2",
+              "name": "Store Message Data"
+            },
+            {
+              "message": "0",
+              "varName": "",
+              "info": "0",
+              "storage": "1",
+              "varName2": "message.main",
+              "name": "Store Message Info"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Quiz:",
+                  "url": "",
+                  "color": "GREEN",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"incorrectAnswers.0\")}\nB: ${tempVars(\"incorrectAnswers.1\")}\nC: ${tempVars(\"incorrectAnswers.2\")}\nD: ${tempVars(\"correctAnswer\")}\n\nTwoja opd: C\nRozwiązanie: ${tempVars(\"correctAnswer\")}",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "message.main",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "storage": "0",
+              "varName": "",
+              "type": "all",
+              "searchValue": "",
+              "name": "Remove Buttons and Selects"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Quiz:",
+          "url": "",
+          "color": "",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Pytanie: ${tempVars(\"question\")}\nA: ${tempVars(\"incorrectAnswers.0\")}\nB: ${tempVars(\"incorrectAnswers.1\")}\nC: ${tempVars(\"incorrectAnswers.2\")}\nD: ${tempVars(\"correctAnswer\")}",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "message.main",
+      "name": "Send Message"
+    },
+    {
+      "message": "1",
+      "varName": "message.main",
+      "dataName": "question",
+      "changeType": "0",
+      "value": "tempVars(\"question\")",
+      "name": "Control Message Data"
+    },
+    {
+      "message": "1",
+      "varName": "message.main",
+      "dataName": "correctAnswer",
+      "changeType": "0",
+      "value": "tempVars(\"correctAnswer\")",
+      "name": "Control Message Data"
+    },
+    {
+      "message": "1",
+      "varName": "message.main",
+      "dataName": "incorrectAnswers.0",
+      "changeType": "0",
+      "value": "tempVars(\"incorrectAnswers.0\")",
+      "name": "Control Message Data"
+    },
+    {
+      "message": "1",
+      "varName": "message.main",
+      "dataName": "incorrectAnswers.1",
+      "changeType": "0",
+      "value": "tempVars(\"incorrectAnswers.1\")",
+      "name": "Control Message Data"
+    },
+    {
+      "message": "1",
+      "varName": "message.main",
+      "dataName": "incorrectAnswers.2",
+      "changeType": "0",
+      "value": "tempVars(\"incorrectAnswers.2\")",
+      "name": "Control Message Data"
+    }
+  ],
+  "comType": "4",
+  "description": "quiz  po polsku",
+  "parameters": []
+}

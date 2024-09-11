@@ -1,0 +1,2767 @@
+{
+  "name": "radio",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "pwRqw",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [
+        {
+          "name": "Rmf",
+          "type": "PRIMARY",
+          "id": "msg-button-565c925",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "MULTI",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [
+                {
+                  "name": "Wybierz nr stacji",
+                  "type": "PRIMARY",
+                  "id": "msg-button-9592317",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "MULTI",
+                  "time": "",
+                  "actions": [
+                    {
+                      "title": "Podaj nr stacji (RMF)",
+                      "textInputs": [
+                        {
+                          "name": "podaj nr stacji od 1 do 34",
+                          "placeholder": "wpisz nr z listy",
+                          "minLength": "0",
+                          "maxLength": "3",
+                          "id": "temp",
+                          "row": "",
+                          "style": "SHORT",
+                          "required": "true"
+                        }
+                      ],
+                      "name": "Show Modal"
+                    },
+                    {
+                      "storage": "1",
+                      "varName": "temp",
+                      "comparison": "4",
+                      "value": "34",
+                      "branch": {
+                        "iftrue": "2",
+                        "iffalse": "0",
+                        "iftrueVal": "5"
+                      },
+                      "name": "Check Variable"
+                    },
+                    {
+                      "storage": "1",
+                      "varName": "temp",
+                      "branches": [
+                        {
+                          "comparison": "1",
+                          "value": "1",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "2",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "2",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "3",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "3",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "4",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "4",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "5",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "5",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "6",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "6",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "7",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "7",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "8",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "8",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "9",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "9",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "10",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "10",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "11",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "11",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "12",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "12",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "13",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "13",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "14",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "14",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "15",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "15",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "16",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "16",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "17",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "17",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "18",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "18",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "19",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "19",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "20",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "20",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "21",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "21",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "22",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "22",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "23",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "23",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "24",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "24",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "25",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "25",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "26",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "26",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "27",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "27",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "28",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "28",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "29",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "29",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "30",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "30",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "31",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "31",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "32",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "32",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "33",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "33",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "34",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "1",
+                              "type": "34",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        }
+                      ],
+                      "name": "Multi-Check Variable"
+                    },
+                    {
+                      "name": "End Action Sequence"
+                    },
+                    {
+                      "channel": "0",
+                      "varName": "",
+                      "message": "Wpisz poprawną liczbę od 1 do 34",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [],
+                      "reply": true,
+                      "ephemeral": true,
+                      "tts": false,
+                      "overwrite": false,
+                      "mention": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                }
+              ],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Wybrano Rmf Fm",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "",
+                  "fields": [
+                    {
+                      "name": "Stacje od 1 do 15",
+                      "value": "**1.RMF 2\n2.RMF 3\n3.RMF 4\n4.RMF 5\n5.RMF 50s\n6.RMF 60s\n7.RMF 70s\n8.RMF 80s\n9.RMF 90s\n10.RMF 2000\n11.RMF alternatywa\n12.RMF baby\n13.RMF beatlemania\n14.RMF blues\n15.RMF bravo**",
+                      "inline": "true"
+                    },
+                    {
+                      "name": "Stacje od 16 do 30",
+                      "value": "**16.RMF celtic\n17.RMF chillout\n18.RMF classic rock\n19.RMF classic\n20.RMF club\n21.RMF dance\n22.RMF depeche mode\n23.RMF filmowa\n24.RMF FM\n25.RMF hiphop\n26.RMF hopbec\n27.RMF hotnew\n28.RMF love\n29.RMF maxxx\n30.RMF party**",
+                      "inline": "true"
+                    },
+                    {
+                      "name": "Stacje od 31 do 34",
+                      "value": "**31.RMF polski rock\n32.RMF polskie przeboje\n33.RMF poplista\n34.RMF sloneczne przeboje**",
+                      "inline": "true"
+                    }
+                  ],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "mention": true,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "mess",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": ":question: ",
+                  "url": "",
+                  "color": "RANDOM",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Wybrano Listę stacji RMF \n> Kliknij w przycisk ``wybierz nr stacji`` i wpisz nr stacji z listy",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": true,
+              "tts": false,
+              "overwrite": false,
+              "mention": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "name": "Eska",
+          "type": "PRIMARY",
+          "id": "msg-button-20abf79",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "MULTI",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [
+                {
+                  "name": "Wybierz nr stacji",
+                  "type": "PRIMARY",
+                  "id": "msg-button-9592317",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "MULTI",
+                  "time": "",
+                  "actions": [
+                    {
+                      "title": "Podaj nr stacji (ESKA)",
+                      "textInputs": [
+                        {
+                          "name": "podaj nr stacji od 35 do 122",
+                          "placeholder": "wpisz nr z listy",
+                          "minLength": "0",
+                          "maxLength": "3",
+                          "id": "temp",
+                          "row": "",
+                          "style": "SHORT",
+                          "required": "true"
+                        }
+                      ],
+                      "name": "Show Modal"
+                    },
+                    {
+                      "storage": "1",
+                      "varName": "temp",
+                      "comparison": "3",
+                      "value": "35",
+                      "branch": {
+                        "iftrue": "2",
+                        "iffalse": "0",
+                        "iftrueVal": "6"
+                      },
+                      "name": "Check Variable"
+                    },
+                    {
+                      "storage": "1",
+                      "varName": "temp",
+                      "comparison": "4",
+                      "value": "122",
+                      "branch": {
+                        "iftrue": "2",
+                        "iffalse": "0",
+                        "iftrueVal": "6"
+                      },
+                      "name": "Check Variable"
+                    },
+                    {
+                      "storage": "1",
+                      "varName": "temp",
+                      "branches": [
+                        {
+                          "comparison": "1",
+                          "value": "35",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "36",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "36",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "37",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "37",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "38",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "38",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "39",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "39",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "40",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "40",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "41",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "41",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "42",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "42",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "43",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "43",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "44",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "44",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "45",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "45",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "46",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "46",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "47",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "47",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "48",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "48",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "49",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "49",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "50",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "50",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "51",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "51",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "52",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "52",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "53",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "53",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "54",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "54",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "55",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "55",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "56",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "56",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "57",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "57",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "58",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "58",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "59",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "59",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "60",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "60",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "61",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "61",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "62",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "62",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "63",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "63",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "64",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "64",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "65",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "65",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "66",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "66",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "67",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "67",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "68",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "68",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "69",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "69",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "70",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "70",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "71",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "71",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "72",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "72",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "73",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "73",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "74",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "74",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "75",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "75",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "76",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "76",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "77",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "77",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "78",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "78",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "79",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "79",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "80",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "80",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "81",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "81",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "82",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "82",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "83",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "83",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "84",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "84",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "85",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "85",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "86",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "86",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "87",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "87",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "88",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "88",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "89",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "89",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "90",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "90",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "91",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "91",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "92",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "92",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "93",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "93",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "94",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "94",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "95",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "95",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "96",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "96",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "97",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "97",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "98",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "98",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "99",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "99",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "100",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "100",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "101",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "101",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "102",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "102",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "103",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "103",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "104",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "104",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "105",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "105",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "106",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "106",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "107",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "107",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "108",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "108",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "109",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "109",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "110",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "110",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "111",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "111",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "112",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "112",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "113",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "113",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "114",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "114",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "115",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "115",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "116",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "116",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "117",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "117",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "118",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "118",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "119",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "119",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "120",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "120",
+                              "type3": "123",
+                              "type4": "235",
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "121",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "121",
+                              "type3": "123",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "122",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "2",
+                              "type": "1",
+                              "type2": "122",
+                              "type3": "123",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        }
+                      ],
+                      "name": "Multi-Check Variable"
+                    },
+                    {
+                      "name": "End Action Sequence"
+                    },
+                    {
+                      "channel": "0",
+                      "varName": "",
+                      "message": "Wpisz poprawną liczbę od 35 do 122",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [],
+                      "reply": true,
+                      "ephemeral": true,
+                      "tts": false,
+                      "overwrite": false,
+                      "mention": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                }
+              ],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Wybrano Eska",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "",
+                  "fields": [
+                    {
+                      "name": "Stacje od 35 do 62",
+                      "value": "**35.Eska Grudziadz\n36.Vox Fm\n37.Eska Warszawa\n38.Eska Rock\n39.Eska Malopolska Zakopane\n40.Eska Wroclaw\n41.Eska Poznan\n42.Eska Impreska\n43.Eska Rzeszow\n44.Eska Kraków\n45.Eska Goraca 20\n46.Radio Plus\n47.Radio Plus Krakow\n48.Eska Białystok\n49.Eska Trojmiasto\n50.Eska Slask\n51.Eska Do Pracy\n52.Eska Rock Polska\n53.Eska Lodz\n54.Disco Polo Top40\n55.Supernova Warszawa\n56.Eska Szczecin\n57.Eska Bydgoszcz\n58.Radio Plus Lublin\n59.Vox Impreza W Rytmie Hitow\n60.Vox 90\n61.Eska Opole\n62.Vox Bestlista**",
+                      "inline": "true"
+                    },
+                    {
+                      "name": "Stacje od 63 do 92",
+                      "value": "**63.Eska Torun\n64.Eska Lublin\n65.Eska Olsztyn\n66.Top Disco Polo\n67.Eska Kalisz Ostrow\n68.Eska Tarnow\n69.Eska Gorzow\n70.Eska Zamosc\n71.Eska Radom\n72.Eska Koszalin\n73.Eska Pila\n74.Eska Elblag\n75.Eska Beskidy\n76.Radio Plus Koszalin\n77.Eska Belchatow\n78.Radio Plus Lodz\n79.Eska Zielona Gora\n80.Eska Siedlce\n81.Eska Kielce\n82.Eska Starachowice\n83.Eska Leszno\n84.Eska Plock\n85.Radio Plus Szczecin\n86.Eska Przemysl\n87.Eska Zary\n88.Eska Ilawa\n89.Radio Plus Olsztyn\n90.Eska Ostrzeszow\n91.Disco Party\n92.Eska Szczecinek**",
+                      "inline": "true"
+                    },
+                    {
+                      "name": "Stacje od 93 do 122",
+                      "value": "**93.Radio Plus Podhale\n94.Eska Lomza\n95.New Pop\n96.Disco Polo Top\n97.Eska Krasnik\n98.Vox Fm Poznan\n99.Gwiazdy Dance\n100.Rock Relaks\n101.New Dance\n102.Eska Rap 20\n103.Pop Top 40\n104.Rock Do Pracy\n105.Eska Braniewo\n106.Dance Top 40\n107.Muzyka Do Pracy\n108.Special Set\n109.Milosc W Rytmie Rock\n110.Supernova Rzeszow\n111.Supernova Gdansk\n112.Supernova Opole\n113.Vox Fm Radom\n114.Radio Go\n115.Vox Fm Gorzow\n116.Supernova Krakow\n117.Supernova Lodz\n118.Z Wami Fm\n119.Supernova Wroclaw\n120.Supernova Torun\n121.Supernova Trzebnica\n122.Supernova Konin**",
+                      "inline": "true"
+                    }
+                  ],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "mention": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "mess",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": ":question: ",
+                  "url": "",
+                  "color": "RANDOM",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Wybrano Listę stacji ESKA\n> Kliknij w przycisk ``wybierz nr stacji`` i wpisz nr stacji z listy",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": true,
+              "tts": false,
+              "overwrite": false,
+              "mention": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        },
+        {
+          "name": "Inne",
+          "type": "PRIMARY",
+          "id": "msg-button-ef07bb6",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "MULTI",
+          "time": "",
+          "actions": [
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [
+                {
+                  "name": "Wybierz nr stacji",
+                  "type": "PRIMARY",
+                  "id": "msg-button-9592317",
+                  "row": "",
+                  "url": "",
+                  "emoji": "",
+                  "mode": "MULTI",
+                  "time": "",
+                  "actions": [
+                    {
+                      "title": "Podaj nr stacji (INNE)",
+                      "textInputs": [
+                        {
+                          "name": "podaj nr stacji od 123 do 136",
+                          "placeholder": "wpisz nr z listy",
+                          "minLength": "0",
+                          "maxLength": "3",
+                          "id": "temp",
+                          "row": "",
+                          "style": "SHORT",
+                          "required": "true"
+                        }
+                      ],
+                      "name": "Show Modal"
+                    },
+                    {
+                      "storage": "1",
+                      "varName": "temp",
+                      "comparison": "3",
+                      "value": "123",
+                      "branch": {
+                        "iftrue": "2",
+                        "iffalse": "0",
+                        "iftrueVal": "6"
+                      },
+                      "name": "Check Variable"
+                    },
+                    {
+                      "storage": "1",
+                      "varName": "temp",
+                      "comparison": "4",
+                      "value": "136",
+                      "branch": {
+                        "iftrue": "2",
+                        "iffalse": "0",
+                        "iftrueVal": "6"
+                      },
+                      "name": "Check Variable"
+                    },
+                    {
+                      "storage": "1",
+                      "varName": "temp",
+                      "branches": [
+                        {
+                          "comparison": "1",
+                          "value": "123",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "3",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "123",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "124",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "3",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "124",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "125",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "3",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "125",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "126",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "3",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "126",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "127",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "3",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "127",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "128",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "3",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "128",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "129",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "3",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "129",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "130",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "3",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "130",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "131",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "3",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "131",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "132",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "3",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "132",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "133",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "3",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "133",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "134",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "3",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "134",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "135",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "3",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "135",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        },
+                        {
+                          "comparison": "1",
+                          "value": "136",
+                          "actions": [
+                            {
+                              "channel": "0",
+                              "varName": "",
+                              "source": "3",
+                              "type": "1",
+                              "type2": "35",
+                              "type3": "136",
+                              "xdopenfm": null,
+                              "type4": null,
+                              "name": "Radio"
+                            }
+                          ]
+                        }
+                      ],
+                      "name": "Multi-Check Variable"
+                    },
+                    {
+                      "name": "End Action Sequence"
+                    },
+                    {
+                      "channel": "0",
+                      "varName": "",
+                      "message": "Wpisz poprawną liczbę od 123 do 136",
+                      "buttons": [],
+                      "selectMenus": [],
+                      "attachments": [],
+                      "embeds": [],
+                      "reply": true,
+                      "ephemeral": true,
+                      "tts": false,
+                      "overwrite": false,
+                      "mention": false,
+                      "dontSend": false,
+                      "editMessage": "0",
+                      "editMessageVarName": "",
+                      "storage": "0",
+                      "varName2": "",
+                      "name": "Send Message"
+                    }
+                  ]
+                }
+              ],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": "Wybrano Inne",
+                  "url": "",
+                  "color": "",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "",
+                  "fields": [
+                    {
+                      "name": "Stacje od 123 do 136",
+                      "value": "**123.Radio Zlote Przeboje\n124.Radio Plus waw\n125.Radio ZET\n126.Radio Nowy\n127.RadioParty.pl\n128.Radio Park\n129.Radio Fest\n130.Radio Muzo FM\n131.Radio Piekary\n132.Radio WNET\n133.Radio FTB Disco Polo\n134.DiscoParty.pl - Disco Polo\n135.Radio Club Party\n136.Freee 89.9 FM**",
+                      "inline": "false"
+                    }
+                  ],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "mention": false,
+              "dontSend": false,
+              "editMessage": "1",
+              "editMessageVarName": "mess",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": "",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [
+                {
+                  "title": ":question: ",
+                  "url": "",
+                  "color": "RANDOM",
+                  "timestamp": "false",
+                  "imageUrl": "",
+                  "thumbUrl": "",
+                  "description": "Wybrano Listę stacji INNE\n> Kliknij w przycisk ``wybierz nr stacji`` i wpisz nr stacji z listy",
+                  "fields": [],
+                  "author": "",
+                  "authorUrl": "",
+                  "authorIcon": "",
+                  "footerText": "",
+                  "footerIconUrl": ""
+                }
+              ],
+              "reply": true,
+              "ephemeral": true,
+              "tts": false,
+              "overwrite": false,
+              "mention": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Wybierz stacje",
+          "url": "",
+          "color": "RANDOM",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "mention": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "mess",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": []
+}

@@ -1,0 +1,214 @@
+{
+  "name": "work",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "TNmCp",
+  "actions": [
+    {
+      "comment": "zainstaluj moduł >  npm i quick.db@7.1.3",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "comment": "zainstaluj moduł >  npm i sqlite3",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "av",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "lista",
+      "name": "Create List"
+    },
+    {
+      "storage": "1",
+      "varName": "lista",
+      "addType": "0",
+      "position": "",
+      "value": "\"taksówkarz\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "lista",
+      "addType": "0",
+      "position": "",
+      "value": "\"rybak\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "lista",
+      "addType": "0",
+      "position": "",
+      "value": "\"agent\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "lista",
+      "addType": "0",
+      "position": "",
+      "value": "\"prawnik\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "lista",
+      "addType": "0",
+      "position": "",
+      "value": "\"dziennikarz\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "lista",
+      "addType": "0",
+      "position": "",
+      "value": "\"sprzątacz\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "lista",
+      "addType": "0",
+      "position": "",
+      "value": "\"sprzątacz\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "lista",
+      "addType": "0",
+      "position": "",
+      "value": "\"programista\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "1",
+      "varName": "lista",
+      "addType": "0",
+      "position": "",
+      "value": "\"muzyk\"",
+      "name": "Add Item to List"
+    },
+    {
+      "list": "7",
+      "varName": "lista",
+      "getType": "2",
+      "position": "",
+      "storage": "1",
+      "varName2": "praca",
+      "name": "Get Item from List"
+    },
+    {
+      "storage": "1",
+      "varName": "godzin",
+      "min": "1",
+      "max": "8",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "k/h",
+      "min": "20",
+      "max": "100",
+      "name": "Generate Random Number"
+    },
+    {
+      "FirstNumber": "${tempVars(\"godzin\")}",
+      "info": "2",
+      "SecondNumber": "${tempVars(\"k/h\")}",
+      "storage": "1",
+      "varName": "łączne",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "credits",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "credits",
+      "name": "Store Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"łączne\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"credits\")}",
+      "storage": "1",
+      "varName": "łączne2",
+      "name": "Basic Math Operation"
+    },
+    {
+      "dbformat": "quick.db",
+      "dboperation": "add",
+      "dbpath": "client.${tempVars(\"id\")}.kasa",
+      "dbvalue": "${tempVars(\"łączne\")}",
+      "storage": "1",
+      "varName": "",
+      "name": "Local Database"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "#2f3136",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Pracowałeś jako ${tempVars(\"praca\")}.\nDla stawki ${tempVars(\"k/h\")} łącznie pracowałeś ${tempVars(\"godzin\")} godzin/y\na więc zarobiłeś ${tempVars(\"łączne\")}",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Pracuj i zarabiaj ",
+  "_timeRestriction": 300
+}

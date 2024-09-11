@@ -1,0 +1,172 @@
+{
+  "name": "daily",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "axPCu",
+  "actions": [
+    {
+      "comment": "zainstaluj moduł >  npm i quick.db@7.1.3",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "comment": "zainstaluj moduł >  npm i sqlite3",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "4",
+      "storage": "1",
+      "varName2": "color",
+      "name": "Store Member Info"
+    },
+    {
+      "type": "2",
+      "storage": "1",
+      "varName": "DailyDay",
+      "name": "Store Time Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "dailyDelay",
+      "comparison": "1",
+      "value": "tempVars(\"DailyDay\")",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "2"
+      },
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Nie możesz jeszcze użyć tej komendy. Tą komendę możesz użyć raz dziennie!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "RandKasaNum",
+      "min": "40",
+      "max": "50",
+      "name": "Generate Random Number"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "dbformat": "quick.db",
+      "dboperation": "add",
+      "dbpath": "client.${tempVars(\"id\")}.kasa",
+      "dbvalue": "${tempVars(\"RandKasaNum\")}",
+      "storage": "1",
+      "varName": "",
+      "name": "Local Database"
+    },
+    {
+      "dbformat": "quick.db",
+      "dboperation": "get",
+      "dbpath": "client.${tempVars(\"id\")}.kasa",
+      "dbvalue": "${tempVars(\"RandKasaNum\")}",
+      "storage": "1",
+      "varName": "kasa",
+      "name": "Local Database"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "AuthorAvatar",
+      "name": "Store Member Info"
+    },
+    {
+      "type": "2",
+      "storage": "1",
+      "varName": "DailyDay",
+      "name": "Store Time Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "dailyDelay",
+      "changeType": "0",
+      "value": "tempVars(\"DailyDay\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "#2f3136",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "",
+          "fields": [
+            {
+              "name": "**__Twoja dzienna nagroda__**",
+              "value": "${tempVars(\"RandKasaNum\")}",
+              "inline": "false"
+            },
+            {
+              "name": "**__Portfel__**",
+              "value": "${tempVars(\"kasa\")}",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "_aliases": [],
+  "description": "Dniówka",
+  "permissions2": "NONE"
+}
