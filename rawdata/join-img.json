@@ -1,0 +1,52 @@
+{
+  "name": "join img",
+  "temp": "member",
+  "event-type": "6",
+  "_id": "PzbPu",
+  "actions": [
+    {
+      "comment": "mod - https://github.com/nowehity97/dbm/blob/main/actions/powitanie.js",
+      "color": "#ffffff",
+      "name": "Comment"
+    },
+    {
+      "comment": "zmień id kanału w embed ",
+      "color": "#ffffff",
+      "name": "Comment"
+    },
+    {
+      "comment": "canvas - npm i canvas",
+      "color": "#ffffff",
+      "name": "Comment"
+    },
+    {
+      "fontPath": "fonts/Lobster 1.4.otf",
+      "backgroundImageURL": "https://i.postimg.cc/bvQ1rn1L/item19.png",
+      "fontColor": "#00eaff",
+      "avatarBorderColor": "#00fff6",
+      "fontSize1": "77",
+      "fontSize2": "71",
+      "fontSize3": "67",
+      "fontSize4": "58",
+      "text1": "Witaj,  {username}",
+      "text2": "Miło Cię widzieć na naszym serwerze!",
+      "text3": " Dzięki, że dołączyłeś",
+      "text4": "Na serwerze jest teraz {count} aktywnych użytkowników",
+      "text1X": "0",
+      "text1Y": "100",
+      "text2X": "0",
+      "text2Y": "186",
+      "text3X": "0",
+      "text3Y": "580",
+      "text4X": "0",
+      "text4Y": "680",
+      "avatarX": "0",
+      "avatarY": "237",
+      "embedTitle": "Witaj  {username}",
+      "embedDesc": "Cieszymy się, że jesteś z nami! 😏",
+      "embedColor": "RANDOM",
+      "channelID": "1224088754931630120",
+      "name": "Powitanie z grafiką"
+    }
+  ]
+}
