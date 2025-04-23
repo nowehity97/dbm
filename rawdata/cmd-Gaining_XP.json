@@ -1,0 +1,261 @@
+{
+  "name": "Gaining_XP",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "ebXhg",
+  "actions": [
+    {
+      "info": "0",
+      "find": "934069560599019520",
+      "storage": "1",
+      "varName": "ch",
+      "name": "Find Channel"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "4",
+      "storage": "1",
+      "varName2": "color",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "level",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "level2",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "xp",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "xp2",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "xpneeded",
+      "defaultVal": "36",
+      "storage": "1",
+      "varName2": "xpneeded2",
+      "name": "Store Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "xp2",
+      "comparison": "2",
+      "value": "tempVars(\"xpneeded2\")",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "10"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "FirstNumber": "${tempVars(\"xp2\")}",
+      "info": "1",
+      "SecondNumber": "1",
+      "storage": "1",
+      "varName": "xd",
+      "name": "Math Operation Plus"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "xpneeded",
+      "changeType": "0",
+      "value": "tempVars(\"xd\")",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cooldown",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "isoncooldown",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cooldown",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "xpnumber",
+      "min": "4",
+      "max": "13",
+      "name": "Generate Random Number"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "xp",
+      "comparison": "1",
+      "value": "tempVars(\"xpneeded2\")",
+      "iftrue": "3",
+      "iftrueVal": "1",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "xp",
+      "changeType": "1",
+      "value": "+tempVars(\"xpnumber\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "xp",
+      "comparison": "4",
+      "value": "tempVars(\"xpneeded2\")",
+      "iftrue": "0",
+      "iftrueVal": "1",
+      "iffalse": "2",
+      "iffalseVal": "45",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "level",
+      "changeType": "1",
+      "value": "+1",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "xp",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "xpneeded",
+      "changeType": "0",
+      "value": "tempVars(\"level2\") * 126",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "level",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "level2",
+      "name": "Store Member Data"
+    },
+    {
+      "title": "Nowy level",
+      "author": "",
+      "color": "${tempVars(\"color\")}",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "http://blog.core-ed.org/files/2018/07/level-up.png",
+      "storage": "1",
+      "varName": "112",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "112",
+      "message": "Brawo ${member} masz ${tempVars(\"level2\")} level ",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "112",
+      "channel": "5",
+      "varName2": "ch",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "wait",
+      "min": "4",
+      "max": "10",
+      "name": "Generate Random Number"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cooldown",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Member Data"
+    },
+    {
+      "time": "${tempVars(\"wait\")}",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cooldown",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cooldown",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Member Data"
+    },
+    {
+      "time": "${tempVars(\"level2\")} * 1.44",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "cooldown",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "comType": "3"
+}
