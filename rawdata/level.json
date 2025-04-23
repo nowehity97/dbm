@@ -1,0 +1,165 @@
+{
+  "name": "level",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "ehecI",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "memid",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Server Info"
+    },
+    {
+      "File": "0",
+      "serverType": "0",
+      "dataName": "level",
+      "sort": "0",
+      "numberBoolean": "0",
+      "resultFormat": "",
+      "resultInfo": "1",
+      "rank": "${tempVars(\"memid\")}",
+      "resultType": "0",
+      "resultFrom": "",
+      "resultTo": "",
+      "varName": "rank",
+      "storage": "1",
+      "name": "Store Data List MOD"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "autoravatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "15",
+      "storage": "1",
+      "varName2": "status",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "xp",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "xp2",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "xpneeded",
+      "defaultVal": "36",
+      "storage": "1",
+      "varName2": "xpneeded2",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "level",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "level2",
+      "name": "Store Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"xp2\")}",
+      "info": "3",
+      "SecondNumber": "${tempVars(\"xpneeded2\")}",
+      "storage": "1",
+      "varName": "wynik1",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "${tempVars(\"wynik1\")}",
+      "info": "2",
+      "SecondNumber": "100",
+      "storage": "1",
+      "varName": "wynik2",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "${tempVars(\"xpneeded2\")}",
+      "info": "19",
+      "SecondNumber": "${tempVars(\"%xp\")}",
+      "storage": "1",
+      "varName": "%xp",
+      "name": "Math Operation Plus"
+    },
+    {
+      "text": "${tempVars(\"name\")}",
+      "text2": " ",
+      "text3": "%20",
+      "info": "1",
+      "storage": "1",
+      "varName": "repname",
+      "name": "Replace Text"
+    },
+    {
+      "text": "${tempVars(\"rank\")}",
+      "text2": "undefined",
+      "text3": "brak",
+      "info": "1",
+      "storage": "1",
+      "varName": "1rank",
+      "name": "Replace Text"
+    },
+    {
+      "usernameVar": "name",
+      "usernameVarType": "1",
+      "avatarVar": "autoravatar",
+      "avatarVarType": "1",
+      "levelVar": "level2",
+      "levelVarType": "1",
+      "rankVar": "1rank",
+      "rankVarType": "1",
+      "minXPVar": "xp2",
+      "minXPVarType": "1",
+      "maxXPVar": "xpneeded2",
+      "maxXPVarType": "1",
+      "color": "",
+      "name": "Generate Rank Card"
+    },
+    {
+      "comment": "mod - https://github.com/nowehity97/dbm/blob/main/actions/rankcard.js",
+      "color": "#ffffff",
+      "name": "Comment"
+    },
+    {
+      "comment": "npm i rankcard",
+      "color": "#ffffff",
+      "name": "Comment"
+    }
+  ],
+  "comType": "4",
+  "_aliases": [
+    "rank"
+  ],
+  "parameters": [],
+  "description": "Zobacz swój poziom"
+}
