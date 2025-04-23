@@ -1,0 +1,21 @@
+{
+  "name": "news",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "nIRYm",
+  "actions": [
+    {
+      "comment": "mod - https://github.com/nowehity97/dbm/blob/main/actions/news.js",
+      "color": "#ffffff",
+      "name": "Comment"
+    },
+    {
+      "category": "all",
+      "channel": null,
+      "name": "Google News Fetcher"
+    }
+  ],
+  "comType": "4",
+  "parameters": []
+}
