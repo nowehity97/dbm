@@ -5,6 +5,7 @@ const { XMLParser } = require("fast-xml-parser");
 module.exports = {
   name: "Google News Fetcher",
   section: "Other Stuff",
+  author: "Hit stary",
 
   subtitle(data) {
     return `Kategoria: ${data.category}`;
