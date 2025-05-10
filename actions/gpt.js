@@ -1,7 +1,7 @@
 module.exports = {
   name: "AI GPT-4o Response",
   section: "Other Stuff",
-
+  author: "Hit stary",
   subtitle(data) {
     return `Temp message user: <span style="color:rgb(0,200,0)">${data.userMessageVarName}</span>, Save temp answer: <span style="color:rgb(0,192,255)">${data.responseVarName}</span>`;
   },
