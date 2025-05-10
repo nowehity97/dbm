@@ -1,7 +1,7 @@
 module.exports = {
   name: "Powitanie z grafiką",
   section: "Obrazy i Canvas",
-  author: "TwojNick",
+  author: "Hit stary",
   version: "1.0.3",
   short_description: "Tworzy powitalną grafikę z tekstami i embedem",
 
