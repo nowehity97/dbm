@@ -1,6 +1,7 @@
 module.exports = {
     name: "Generate Rank Card",
     section: "Image & Embed",
+    author: "Hit stary",
   
     subtitle(data) {
       return `Rank card for variable: ${data.usernameVar}`;
