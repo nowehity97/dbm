@@ -69,11 +69,14 @@ module.exports = {
     <div style="float: left; width: calc(60% - 12px);">
     <span class="dbminputlabel">Game</span><br>
     <select id="game" class="round" onchange="glob.onChange1(this)">
-        <option value="0">Kamień Papier Nożyce</option>
-        <option value="1">Wąż</option>
-        <option value="2">Kółko i Krzyżyk</option>
-        <option value="3">2048</option>
-        <option value="4">4 Pod rząd</option>
+        <option value="0">2048</option>
+        <option value="1">FindEmoji</option>
+        <option value="2">Flood</option>
+        <option value="3">MatchPairs</option>
+        <option value="4">Minesweeper</option>
+        <option value="5">Snake</option>
+        <option value="6">Hangman</option>
+
     </select><br>
     <span id="member2" class="dbminputlabel">Member (ID)<span style="color:red">*</span></span>
     <input id="member" class="round" placeholder="Id osoby z którą będziesz chciał walczyć!" type="text">
@@ -99,20 +102,23 @@ module.exports = {
         const member2 = document.getElementById('member2')
     
         if (value === 0) {
-            member.style.display = null
-            member2.style.display = null
+            member.style.display = 'noce'
+            member2.style.display = 'noce'
         } else if (value === 1) {
             member.style.display = 'none'
             member2.style.display = 'none'
         } else if (value === 2) {
-            member.style.display = null
-            member2.style.display = null
+            member.style.display = 'none'
+            member2.style.display = 'none'
         } else if (value === 3) {
             member.style.display = 'none'
             member2.style.display = 'none'
         } else if (value === 4) {
-            member.style.display = null
-            member2.style.display = null
+            member.style.display =  'none'
+            member2.style.display = 'none'
+        }else if (value === 5) {
+            member.style.display = 'none'
+            member2.style.display = 'none'
         }
         };
         glob.onChange1(document.getElementById('game'));
@@ -128,51 +134,14 @@ module.exports = {
   
     async action(cache) {
       const { interaction } = cache;
-      const { RPSGame, Snake, TicTacToe, TwoZeroFourEight, Connect4 } = require('discord-gamecord')
+      const { TwoZeroFourEight, FindEmoji, Flood, MatchPairs, Minesweeper, Snake, Hangman} = require('discord-gamecord@v3-lts') 
+      /// polish module gamecord replce - require('polish-gamecord')
       const data = cache.actions[cache.index];
       let member
       if (data.member) member = interaction.guild.members.cache.get(this.evalMessage(data.member, cache)).user
       const game = parseInt(data.game)
       switch(game) {
         case 0: {
-            new RPSGame({
-                message: interaction,
-                slash_command: true,
-                opponent: member,
-                //embed: {
-                //    title: '',
-                //    description: '',
-                //    color: '',
-               // }
-            }).startGame()
-        }
-        break;
-        case 1: {
-            new Snake({
-                message: interaction,
-                slash_command: true,
-                //embed: {
-                //    title: '',
-                //    description: '',
-                //    color: '',
-               // }
-            }).startGame()
-        }
-        break;
-        case 2: {
-            new TicTacToe({
-                message: interaction,
-                slash_command: true,
-                opponent: member,
-                //embed: {
-                //    title: '',
-                //    description: '',
-                //    color: '',
-               // }
-            }).startGame()
-        }
-        break;
-        case 3: {
             new TwoZeroFourEight({
                 message: interaction,
                 slash_command: true,
@@ -184,11 +153,70 @@ module.exports = {
             }).startGame()
         }
         break;
-        case 4: {
-            new Connect4({
+        case 1: {
+            new FindEmoji({
                 message: interaction,
                 slash_command: true,
-                opponent: member,
+                //embed: {
+                //    title: '',
+                //    description: '',
+                //    color: '',
+               // }
+            }).startGame()
+        }
+        break;
+        case 2: {
+            new Flood({
+                message: interaction,
+                slash_command: true,
+                //embed: {
+                //    title: '',
+                //    description: '',
+                //    color: '',
+               // }
+            }).startGame()
+        }
+        break;
+        case 3: {
+            new MatchPairs({
+                message: interaction,
+                slash_command: true,
+                //embed: {
+                //    title: '',
+                //    description: '',
+                //    color: '',
+               // }
+            }).startGame()
+        }
+        break;
+        case 4: {
+            new Minesweeper({
+                message: interaction,
+                slash_command: true,
+                //embed: {
+                //    title: '',
+                //    description: '',
+                //    color: '',
+               // }
+            }).startGame()
+        }
+        break;
+        case 5: {
+            new Snake({
+                message: interaction,
+                slash_command: true,
+                //embed: {
+                //    title: '',
+                //    description: '',
+                //    color: '',
+               // }
+            }).startGame()
+        }
+        break;
+        case 6: {
+            new Hangman({
+                message: interaction,
+                slash_command: true,
                 //embed: {
                 //    title: '',
                 //    description: '',
