@@ -1,16 +1,184 @@
-// 🧠 Naprawiona wersja z zabezpieczeniem cmd.name
 module.exports = {
   name: 'Set Time Restriction',
   section: 'Other Stuff',
   meta: {
     version: '2.1.7',
     preciseCheck: false,
-    author: 'DBM Mods + fix by ChatGPT',
+    author: 'DBM Mods',
     authorUrl: 'https://github.com/dbm-network/mods',
     downloadURL: 'https://github.com/dbm-network/mods/blob/master/actions/set_time_restriction_MOD.js',
   },
 
-  // ... --- POMIJAM HTML I INIT, BO SIĘ NIE ZMIENIŁY --- ...
+  subtitle(data) {
+    const results = [
+      'Continue Actions',
+      'Stop Action Sequence',
+      'Jump To Action',
+      'Jump Forward Actions',
+      'Jump to Anchor',
+    ];
+    const measurement = ['Milliseconds', 'Seconds', 'Minutes', 'Hours'];
+    return `${data.value} ${measurement[data.measurement]} | If True: ${
+      results[parseInt(data.iftrue, 10)]
+    } ~ If False: ${results[parseInt(data.iffalse, 10)]}`;
+  },
+
+  variableStorage(data, varType) {
+    if (parseInt(data.storage, 10) !== varType) return;
+    return [data.varName, 'Seconds'];
+  },
+
+  fields: [
+    'measurement',
+    'value',
+    'save',
+    'restrict',
+    'iftrue',
+    'iftrueVal',
+    'iffalse',
+    'iffalseVal',
+    'storage',
+    'varName',
+  ],
+
+  html(_isEvent, data) {
+    data.conditions[0] = data.conditions[0]
+      .replace(/If True/g, 'If Cooldown is Active')
+      .replace(/If False/g, 'If Cooldown is Not Active');
+    return `
+<div>
+  <div style="padding-top: 8px;">
+    <div style="float: left; width: 35%;">
+      <span class="dbminputlabel">Time Measurement</span><br>
+      <select id="measurement" class="round" onchange="glob.onChange(this)">
+        <option value="0">Milliseconds</option>
+        <option value="1" selected>Seconds</option>
+        <option value="2">Minutes</option>
+        <option value="3">Hours</option>
+        <option value="4">Days</option>
+      </select>
+    </div>
+    <div style="padding-left: 5%; float: left; width: 65%;">
+      <span class="dbminputlabel">Cooldown Time</span><br>
+      <input id="value" class="round" type="text" placeholder="1 = 1 second"><br>
+    </div>
+  </div>
+  <br><br><br>
+  
+  <div style="padding-top: 8px;">
+    <div style="float: left; width: 35%;">
+      <span class="dbminputlabel">Reset After Restart?</span><br>
+      <select id="save" class="round"><br>
+        <option value="0" selected>False</option>
+        <option value="1">True</option>
+      </select>
+    </div>
+    <div style="padding-left: 5%; float: left; width: 59%;">
+      <span class="dbminputlabel">Restrict By</span><br>
+      <select id="restrict" class="round"><br>
+        <option value="0" selected>Global</option>
+        <option value="1">Server</option>
+      </select>
+    </div>
+  </div>
+  <br><br><br>
+  
+  <div style="padding-top: 8px;">
+    ${data.conditions[0]}
+  </div>
+  <br><br><br>
+  
+  <div style="padding-top: 8px;">
+    <store-in-variable allowNone dropdownLabel="Store Time Left In (s)" selectId="storage" variableContainerId="varNameContainer" variableInputId="varName"></store-in-variable>
+  </div>
+</div>`;
+  },
+
+  init() {
+    const { glob, document } = this;
+    const value = document.getElementById('value');
+
+    glob.onChange = function onChange(Measurement) {
+      switch (parseInt(Measurement.value, 10)) {
+        case 0:
+          value.placeholder = '1000 = 1 second';
+          break;
+        case 1:
+          value.placeholder = '1 = 1 second';
+          break;
+        case 2:
+          value.placeholder = '1 = 60 seconds';
+          break;
+        case 3:
+          value.placeholder = '1 = 3600 seconds';
+          break;
+        case 4:
+          value.placeholder = '1 = 86400 seconds';
+        default:
+          break;
+      }
+    };
+
+    const option = document.createElement('OPTION');
+    option.value = '4';
+    option.text = 'Jump to Anchor';
+    const iffalse = document.getElementById('iffalse');
+    if (iffalse.length === 4) iffalse.add(option);
+
+    const option2 = document.createElement('OPTION');
+    option2.value = '4';
+    option2.text = 'Jump to Anchor';
+    const iftrue = document.getElementById('iftrue');
+    if (iftrue.length === 4) iftrue.add(option2);
+
+    glob.onChangeTrue = function onChangeTrue(event) {
+      switch (parseInt(event.value, 10)) {
+        case 0:
+        case 1:
+          document.getElementById('iftrueContainer').style.display = 'none';
+          break;
+        case 2:
+          document.getElementById('iftrueName').innerHTML = 'Action Number';
+          document.getElementById('iftrueContainer').style.display = null;
+          break;
+        case 3:
+          document.getElementById('iftrueName').innerHTML = 'Number of Actions to Skip';
+          document.getElementById('iftrueContainer').style.display = null;
+          break;
+        case 4:
+          document.getElementById('iftrueName').innerHTML = 'Anchor ID';
+          document.getElementById('iftrueContainer').style.display = null;
+          break;
+        default:
+          break;
+      }
+    };
+    glob.onChangeFalse = function onChangeFalse(event) {
+      switch (parseInt(event.value, 10)) {
+        case 0:
+        case 1:
+          document.getElementById('iffalseContainer').style.display = 'none';
+          break;
+        case 2:
+          document.getElementById('iffalseName').innerHTML = 'Action Number';
+          document.getElementById('iffalseContainer').style.display = null;
+          break;
+        case 3:
+          document.getElementById('iffalseName').innerHTML = 'Number of Actions to Skip';
+          document.getElementById('iffalseContainer').style.display = null;
+          break;
+        case 4:
+          document.getElementById('iffalseName').innerHTML = 'Anchor ID';
+          document.getElementById('iffalseContainer').style.display = null;
+          break;
+        default:
+          break;
+      }
+    };
+    glob.onChangeTrue(document.getElementById('iftrue'));
+    glob.onChangeFalse(document.getElementById('iffalse'));
+    glob.onChange(document.getElementById('Measurement'));
+  },   
 
   async action(cache) {
     const data = cache.actions[cache.index];
