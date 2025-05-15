@@ -195,7 +195,6 @@ module.exports = {
     }
 
     if (!cmd || !cmd.name) {
-      console.error('❌ Nie znaleziono komendy powiązanej z tym zestawem akcji (cmd.name undefined).');
       return this.executeResults(false, data, cache);
     }
 
