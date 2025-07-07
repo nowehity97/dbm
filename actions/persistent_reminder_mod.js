@@ -107,6 +107,5 @@ module.exports = {
   },
 
   mod() {
-    console.log("🧠 Test Reminder Slash mod załadowany");
   },
 };
