@@ -1,0 +1,53 @@
+{
+  "name": "co teraz gra",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "lcaLb",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "4",
+      "varName2": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "5",
+      "name": "Check If Member"
+    },
+    {
+      "filename": "./radio-url.txt",
+      "storage": "1",
+      "varName2": "url",
+      "name": "Read File"
+    },
+    {
+      "streamUrl": "${tempVars(\"url\")}",
+      "name": "Co Gra W Radiu"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "dolacz do kanalu glosowego",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "0"
+}
