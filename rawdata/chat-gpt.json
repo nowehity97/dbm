@@ -17,7 +17,7 @@
       "storage": "1",
       "varName": "chid",
       "comparison": "1",
-      "value": "'1401647978325872730'",
+      "value": "'tu daj id kanału'",
       "branch": {
         "iftrue": "0",
         "iffalse": "1"
@@ -74,25 +74,6 @@
       "headers": "User-Agent: Other\nContent-Type: application/json",
       "method": "POST",
       "name": "Send Json to WebAPI"
-    },
-    {
-      "channel": "0",
-      "varName": "",
-      "message": "${tempVars(\"apikey\")}",
-      "buttons": [],
-      "selectMenus": [],
-      "attachments": [],
-      "embeds": [],
-      "reply": true,
-      "ephemeral": false,
-      "tts": false,
-      "overwrite": false,
-      "dontSend": false,
-      "editMessage": "0",
-      "editMessageVarName": "",
-      "storage": "0",
-      "varName2": "",
-      "name": "Send Message"
     },
     {
       "behavior": "0",
