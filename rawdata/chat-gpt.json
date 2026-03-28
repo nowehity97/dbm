@@ -3,7 +3,7 @@
   "permissions": "NONE",
   "permissions2": "NONE",
   "restriction": "1",
-  "_id": "HtkDP",
+  "_id": "UOzhz",
   "actions": [
     {
       "channel": "0",
@@ -17,36 +17,12 @@
       "storage": "1",
       "varName": "chid",
       "comparison": "1",
-      "value": "'id-channel'",
+      "value": "'1401647978325872730'",
       "branch": {
         "iftrue": "0",
         "iffalse": "1"
       },
       "name": "Check Variable"
-    },
-    {
-      "member": "1",
-      "varName": "",
-      "info": "1",
-      "storage": "1",
-      "varName2": "username",
-      "name": "Store Member Info"
-    },
-    {
-      "message": "0",
-      "varName": "",
-      "info": "2",
-      "storage": "1",
-      "varName2": "Text",
-      "name": "Store Message Info"
-    },
-    {
-      "member": "1",
-      "varName": "",
-      "info": "2",
-      "storage": "1",
-      "varName2": "memname",
-      "name": "Store Member Info"
     },
     {
       "member": "1",
@@ -73,39 +49,79 @@
       "name": "Store Message Info"
     },
     {
-      "storage": "1",
-      "varName": "time",
-      "name": "Store Unix Timestamp"
+      "comment": "api key - https://github.com/settings/personal-access-tokens/new",
+      "color": "#ff0000",
+      "name": "Comment"
     },
     {
-      "time": "${tempVars(\"time\")}",
-      "storage": "1",
-      "varName": "accuratetime",
-      "name": "Convert Timestamp to Date"
+      "behavior": "0",
+      "interpretation": "1",
+      "code": "tempVars(\"apikey\", \"tutaj-wpisz-klucz\"); // <-- TU wpisujesz klucz ręcznie \ncallNextAction();",
+      "storage": "0",
+      "varName": "",
+      "name": "Run Script"
     },
     {
-      "apiKey": "api key https://github.com/settings/personal-access-tokens/new",
-      "userMessageVarName": "messtext",
-      "userMessageVarType": "1",
-      "responseVarName": "ai",
-      "responseVarType": "1",
-      "systemMessage": "\"You are AI-Bot, an AI assistant. The person your talking to is '${tempVars(\"display\")}'. Male sure to greet the user with your response, by saying something like .Use polish lang. You may give short reponses, unless required depending on what you asked for. You have Internet access as the current time in UNIX timestamp is ${tempVars(\"accuratetime\")}.",
-      "systemMessageType": null,
-      "storage": null,
-      "varName2": null,
-      "name": "AI GPT-4o Response"
+      "hideUrl": null,
+      "debugMode": "0",
+      "postUrl": "https://api.wiedzminpolska.xyz/gpt",
+      "postJson": "{\n  \"message\": \"${tempVars(\"messtext\")}\",\n  \"apikey\": \"${tempVars(\"apikey\")}\"\n}",
+      "storage": "1",
+      "varName": "wynk",
+      "token": "",
+      "user": "",
+      "pass": "",
+      "headers": "User-Agent: Other\nContent-Type: application/json",
+      "method": "POST",
+      "name": "Send Json to WebAPI"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"apikey\")}",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "behavior": "0",
+      "varStorage": "1",
+      "jsonObjectVarName": "wynk",
+      "path": "choices[0].message.content",
+      "storage": "1",
+      "varName": "ai",
+      "name": "Parse From Stored Json"
     },
     {
       "behavior": "0",
       "interpretation": "0",
-      "code": "const Discord = require('discord.js');\nconst client = new Discord.Client({intents: [\"GUILDS\", \"GUILD_MESSAGES\"] });\nconst { MessageEmbed } = require('discord.js');\nconst { msg } = cache;\n\nconst clever = tempVars(\"ai\");\nconst fi =  tempVars(\"memava\");\nconst ft =tempVars(\"memname\") ;\nconst wia = tempVars(\"messtext\")\n\nconst embed = new MessageEmbed()\n.setColor('#2f3136')\n.setDescription(clever)\n.setFooter({ text: `` + ' ' + ft , iconURL: fi })\nmsg.reply({ embeds: [embed], allowedMentions: { repliedUser: false } })",
+      "code": "const { MessageEmbed } = require('discord.js');\nconst { msg } = cache;\n\n// Pobieramy zmienne\nlet clever = tempVars(\"ai\");\nconst fi = tempVars(\"memava\");\nconst ft = tempVars(\"memname\");\n\n// --- FIX: Zabezpieczenie przed błędem EMBED_DESCRIPTION ---\n// Jeśli clever jest puste, dajemy tekst zastępczy zamiast wywalać błąd\nif (!clever || String(clever).trim() === \"undefined\" || String(clever).trim() === \"\") {\n    clever = \"Zaraza... Vesemir nie odpowiedział. Sprawdź czy API działa lub czy nie użyłeś dziwnych znaków.\";\n} else {\n    clever = String(clever); // Upewniamy się, że to na pewno String\n}\n\nconst embed = new MessageEmbed()\n.setColor('#2f3136')\n    .setDescription(clever)\n    .setFooter({ \n        text: ft ? String(ft) : \"Wiedźmin\", \n        iconURL: fi ? String(fi) : null \n    });\n\n// Wysyłamy odpowiedź\nmsg.reply({ embeds: [embed], allowedMentions: { repliedUser: false } })\n    .then(() => this.callNextAction(cache))\n    .catch(err => console.error(\"Błąd wysyłania: \" + err));",
       "storage": "0",
       "varName": "",
       "name": "Run Script"
     }
   ],
   "comType": "3",
-  "parameters": [],
-  "description": "Ask a GPT 3.5 turbo model anything!",
+  "parameters": [
+    {
+      "name": "prompt",
+      "description": "What would you like to ask?",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "",
   "_timeRestriction": 5
 }
